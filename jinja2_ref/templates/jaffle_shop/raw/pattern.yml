@@ -1,0 +1,27 @@
+patterns:
+  - name: default
+    process:
+      enabled: True
+      process: "load_{name}"
+      type: notebook
+    
+    source:
+      layer: landing
+      datastore: None
+      format: csv
+      partition_by: "dd/MM/YYY"
+      options:
+        header: True
+        delimiter: ","
+        inferSchema: True
+        escape: "'"
+        quote: "\""
+
+    destination:  
+      layer: raw
+      datastore: None
+      format: delta
+      partition_by: date
+      options:
+        mode: overwrite
+        mergeschema: True

@@ -1,0 +1,10 @@
+pattern: default
+name: payments
+
+source:
+  datastore: "{layer}_stripe" 
+
+destination: 
+  # name can be overidden
+  name: stripe_payments
+  datastore: "{layer}_jaffle_shop" 
