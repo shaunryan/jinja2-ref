@@ -1,0 +1,10 @@
+{
+    "pattern": "default",
+    "name": "customers",
+    "source": {
+        "datastore": "{layer}_jaffle_shop"
+    },
+    "destination": {
+        "datastore": "{layer}_jaffle_shop"
+    }
+}

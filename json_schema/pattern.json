@@ -1,0 +1,135 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "patterns": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "process": {
+                        "type": "object",
+                        "properties": {
+                            "enabled": {
+                                "type": "boolean"
+                            },
+                            "process": {
+                                "type": "string"
+                            },
+                            "type": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "enabled",
+                            "process",
+                            "type"
+                        ]
+                    },
+                    "source": {
+                        "type": "object",
+                        "properties": {
+                            "layer": {
+                                "type": "string"
+                            },
+                            "datastore": {
+                                "type": "string"
+                            },
+                            "format": {
+                                "type": "string"
+                            },
+                            "partition_by": {
+                                "type": "string"
+                            },
+                            "options": {
+                                "type": "object",
+                                "properties": {
+                                    "header": {
+                                        "type": "boolean"
+                                    },
+                                    "delimiter": {
+                                        "type": "string"
+                                    },
+                                    "inferSchema": {
+                                        "type": "boolean"
+                                    },
+                                    "escape": {
+                                        "type": "string"
+                                    },
+                                    "quote": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "delimiter",
+                                    "escape",
+                                    "header",
+                                    "inferSchema",
+                                    "quote"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "datastore",
+                            "format",
+                            "layer",
+                            "options",
+                            "partition_by"
+                        ]
+                    },
+                    "destination": {
+                        "type": "object",
+                        "properties": {
+                            "layer": {
+                                "type": "string"
+                            },
+                            "datastore": {
+                                "type": "string"
+                            },
+                            "format": {
+                                "type": "string"
+                            },
+                            "partition_by": {
+                                "type": "string"
+                            },
+                            "options": {
+                                "type": "object",
+                                "properties": {
+                                    "mode": {
+                                        "type": "string"
+                                    },
+                                    "mergeschema": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "required": [
+                                    "mergeschema",
+                                    "mode"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "datastore",
+                            "format",
+                            "layer",
+                            "options",
+                            "partition_by"
+                        ]
+                    }
+                },
+                "required": [
+                    "destination",
+                    "name",
+                    "process",
+                    "source"
+                ]
+            }
+        }
+    },
+    "required": [
+        "patterns"
+    ]
+}
