@@ -6,7 +6,7 @@ layers:
     description: "where data is landed in file format as a pure replica of the source datastore data object"
     datastores:
       - name: "{{project}}"
-        description: "{{project}} source operational database"
+        description: "{{datastore}} {{project}} source operational database"
         # note the type here
         type: adls
         data_dir: data
