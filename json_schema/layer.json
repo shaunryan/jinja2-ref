@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://sibytes.com/schemas/layer",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "datastores": {
+      "type": "array",
+      "minContains": 1,
+      "items": {
+        "$ref": "/schemas/address"
+      }
+    },
+    "type": {
+        "type": "string", 
+        "enum": ["adls", "deltalake"] 
+    }
+  },
+  "required": ["datastores", "description", "name"]
+}

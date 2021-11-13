@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://sibytes.com/schemas/datastore",
+  "type": "object",
+  "required": ["name", "description", "type"],
+  "properties": {
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "type": { "type": "string", "enum": ["adls", "deltalake"] },
+    "data_dir": { "type": "string" }
+  }
+}

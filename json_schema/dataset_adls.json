@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://sibytes.com/schemas/dataset_adls",
+  "type": "object",
+  "properties": {
+    "layer": {
+      "type": "string"
+    },
+    "datastore": {
+      "type": "string"
+    },
+    "format": {
+      "type": "string"
+    },
+    "partition_by": {
+      "type": "string"
+    },
+    "options": {
+      "type": "object",
+      "properties": {
+        "header": {
+          "type": "boolean"
+        },
+        "delimiter": {
+          "type": "string"
+        },
+        "inferSchema": {
+          "type": "boolean"
+        },
+        "escape": {
+          "type": "string"
+        },
+        "quote": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "header",
+        "inferSchema",
+        "delimiter",
+        "inferSchema",
+        "escape",
+        "quote"
+      ]
+    }
+  },
+  "required": ["layer", "datastore", "format", "partition_by"]
+}

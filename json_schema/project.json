@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
+    "$id": "https://sibytes.com/schemas/project",
     "type": "object",
     "properties": {
         "version": {
@@ -13,48 +14,9 @@
         },
         "layers": {
             "type": "array",
+            "minContains": 1,
             "items": {
-                "type": "object",
-                "properties": {
-                    "name": {
-                        "type": "string"
-                    },
-                    "description": {
-                        "type": "string"
-                    },
-                    "datastores": {
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "properties": {
-                                "name": {
-                                    "type": "string"
-                                },
-                                "description": {
-                                    "type": "string"
-                                },
-                                "type": {
-                                    "type": "string"
-                                },
-                                "data_dir": {
-                                    "type": "string"
-                                }
-                            },
-                            "required": [
-                                "description",
-                                "name"
-                            ]
-                        }
-                    },
-                    "type": {
-                        "type": "string"
-                    }
-                },
-                "required": [
-                    "datastores",
-                    "description",
-                    "name"
-                ]
+                "$ref": "/schemas/layer"
             }
         }
     },

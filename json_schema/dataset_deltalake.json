@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://sibytes.com/schemas/dataset_deltalake",
+  "type": "object",
+  "properties": {
+    "layer": {
+      "type": "string"
+    },
+    "datastore": {
+      "type": "string"
+    },
+    "format": {
+      "type": "string"
+    },
+    "partition_by": {
+      "type": "string"
+    },
+    "options": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": ["overwrite", "append"]
+        },
+        "mergeschema": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "mode",
+        "mergeschema"
+      ]
+    }
+  },
+  "required": ["layer", "datastore", "format", "partition_by"]
+}

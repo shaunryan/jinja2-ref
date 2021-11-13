@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://sibytes.com/schemas/process_dataset",
+
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "process": { "$ref": "/schemas/process" },
+    "source": {
+      "oneOf": [
+        { "$ref": "/schemas/dataset_adls" },
+        { "$ref": "/schemas/dataset_deltalake" }
+      ]
+    },
+    "destination": {
+      "oneOf": [
+        { "$ref": "/schemas/dataset_adls" },
+        { "$ref": "/schemas/dataset_deltalake" }
+      ]
+    }
+  },
+  "required": ["name", "process", "source", "destination"]
+}

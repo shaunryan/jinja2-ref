@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://sibytes.com/schemas/process_dataset",
+
+  "type": "object",
+  "properties": {
+    "pattern": { "type": "string" },
+    "name": { "type": "string" },
+    "process": { "$ref": "/schemas/process" },
+    "source": { "$ref": "#/$defs/name" },
+    "destination": { "$ref": "#/$defs/name" }
+  },
+  "required": ["pattern", "name", "source", "destination"],
+
+  "$defs": {
+    "simple_data_store": {
+      "type": "object",
+      "properties": {
+        "name": { "type": ["null", "string"] },
+        "datastore": { "type": "string" }
+      },
+      "required": ["datastore"]
+    }
+  }
+}

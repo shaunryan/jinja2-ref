@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://sibytes.com/schemas/patterns",
+
+  "type": "array",
+  "minContains": 1,
+  "items": {
+    "$ref": "/schemas/process_dataset"
+  }
+}
