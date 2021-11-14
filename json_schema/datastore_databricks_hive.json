@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/datastore_databricks_hive.schema.json",
+  "title": "Databricks Hive Database",
+  "description": "Databricks has a built in hive database that contain and expose many different types of tables.",
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "type": { "type": "string", "enum": ["databricks_hive"] },
+    "location": { "type": "string" }
+  },
+  "required": ["name", "description", "type", "location"]
+}

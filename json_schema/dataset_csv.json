@@ -1,6 +1,8 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "https://sibytes.com/schemas/dataset_adls",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/dataset_csv.schema.json",
+  "title": "Delimited Text Dataset",
+  "description": "An delimited text format described by a flat file format. CSV is a misnomer however it's consistent with spark",
   "type": "object",
   "properties": {
     "layer": {

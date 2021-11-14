@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/datastore_adls.schema.json",
+  "title": "Azure Datalake Data Store (ADLS)",
+  "description": "An ADLS store is a managed hierarchical HDFS store on Azure.",
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "type": { "type": "string", "enum": ["adls"] },
+    "container": { "type": "string" },
+    "root": { "type": "string" }
+  },
+  "required": ["name", "description", "type", "container", "root"]
+}

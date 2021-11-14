@@ -1,6 +1,8 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "https://sibytes.com/schemas/layer",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/layer.schema.json",
+  "title": "A Datalakehouse Architectural Data Layer",
+  "description": "Layer is architectural data layer that can be a number of data stores. A layer has a set of principals that govern how data enters, leaves & the usability features of the data e.g. quality",
   "type": "object",
   "properties": {
     "name": {
@@ -13,12 +15,15 @@
       "type": "array",
       "minContains": 1,
       "items": {
-        "$ref": "/schemas/address"
+        "oneOf": [
+          {"$ref": "https://example.com/datastore_adls.schema.json"},
+          {"$ref": "https://example.com/datastore_databricks_hive.schema.json"}
+        ]
       }
     },
     "type": {
         "type": "string", 
-        "enum": ["adls", "deltalake"] 
+        "enum": ["adls", "databricks_hive"] 
     }
   },
   "required": ["datastores", "description", "name"]

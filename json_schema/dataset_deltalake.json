@@ -1,6 +1,8 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "https://sibytes.com/schemas/dataset_deltalake",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/dataset_deltalake.schema.json",
+  "title": "Deltalake Dataset",
+  "description": "An deltalake dataset. Deltalake has transactional and schema evolution features",
   "type": "object",
   "properties": {
     "layer": {
