@@ -1,8 +1,0 @@
-pattern: default
-name: orders
-
-source:
-  datastore: "{layer}_jaffle_shop" 
-
-destination:  
-  datastore: "{layer}_jaffle_shop" 

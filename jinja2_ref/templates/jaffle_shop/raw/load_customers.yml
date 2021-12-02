@@ -1,9 +1,0 @@
-pattern: default
-name: customers
-
-source:
-  # name can be overidden
-  datastore: "{layer}_jaffle_shop" 
-
-destination:  
-  datastore: "{layer}_jaffle_shop" 
