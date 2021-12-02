@@ -1,8 +1,9 @@
-from jinja2_ref import basics
-# main(["-p", "./example/jaffle_shop", "-b"])
+from jinja2_ref import (
+    basics, 
+    example1
+)
 
-basics.templateDemo()
-basics.environmentDemo1()
 
+# basics.templateDemo()
 
 
